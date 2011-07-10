@@ -1,1 +1,0 @@
-/home/ju1ius/.vim/bundle/jslint.vim/ftplugin/javascript/jslint.vim
