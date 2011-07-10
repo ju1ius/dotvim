@@ -21,7 +21,7 @@
 	url = https://github.com/vim-scripts/regbuf.vim.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = https://github.com/garbas/vim-snipmate.git
+	url = https://github.com/vim-scripts/snipMate.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/vim-scripts/snipmate-snippets.git
