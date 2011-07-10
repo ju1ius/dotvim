@@ -1,0 +1,46 @@
+snippet req
+	$this->getRequestParameter("${1}");${2}
+snippet rp
+	$request->getParameter('${1:name}', '${2:default}');
+snippet fw
+	$this->forward("${1}", "${2}");${3}
+snippet fw4
+	$this->forward404();${3}
+snippet fw4u
+	$this->forward404Unless(${1:condition});${3}
+snippet red
+	$this->redirect("${1}");${2}
+snippet verror 
+	return sfView::ERROR${2};
+snippet serror 
+	$this->getRequest()->setError("${1}, "${2}");$3}
+
+snippet partial 
+	<?php include_partial("${1}") ?>${2}
+snippet component 
+	<?php include_component("${1}", "${2}") ?>${3}
+snippet slot 
+	<?php include_slot("${1}") ?>
+		${2}
+	<?php end_slot() ?>${3}
+snippet link
+	link_to('${1:text}', '${2:route}'${3:, array(${4})});
+snippet url
+	url_for('${1:route}');
+
+snippet query
+	Doctrine_Query::create()->from('${1}')
+	  ->${2:condition}()
+	  ->execute();
+snippet gettable
+	Doctrine_Core::getTable('${1}')${2};
+
+snippet action 
+	<?php
+	
+	class ${1:index}Action extends sfAction
+	{
+		public function execute($request) {
+			${2}
+		}
+	}${3}

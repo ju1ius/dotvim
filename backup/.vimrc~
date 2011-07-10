@@ -1,0 +1,244 @@
+" ==================================================
+" Basic Settings
+" ==================================================
+
+" Let unix format, utf8, see line number... etc...
+set title " show title in console title bar
+set fileformat=unix
+set encoding=utf-8
+set number
+set backspace=start,indent,eol
+set guioptions+=b
+set cursorline
+set cursorcolumn
+set nocompatible
+set mouse =a
+set visualbell           " don't beep
+set showmatch
+set matchtime=3
+set matchpairs+=<:> " show matching <> (html mainly) as well
+set wildmenu
+
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+"set laststatus=2
+
+
+syn on
+set syntax =on
+set t_Co=256 "Use 256 colors in terminal"
+colorscheme mycolors
+
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+set ttyfast 		" Connexion rapide au terminal : améliore la rapidité d'affichage"
+set nowrap		  " Pas de retour à la ligne sur bord de fenêtre: truc nul en prog"
+set nowrapscan
+"set ai                  " toujours utiliser l'auto-indentation
+set cindent
+set backup            " Ne pas conserver de fichier de sauvegarde
+" Backup dans ~/.vim/backup
+if filewritable(expand("~/.vim/backup")) == 2
+    " comme le répertoire est accessible en écriture,
+    " on va l'utiliser.
+	set backupdir=$HOME/.vim/backup
+else
+	if has("unix") || has("win32unix")
+        " C'est c'est un système compatible UNIX, on
+        " va créer le répertoire et l'utiliser.
+		call system("mkdir $HOME/.vim/backup -p")
+		set backupdir=$HOME/.vim/backup
+	endif
+endif
+
+"Redéfinitions des tabulations"
+filetype indent plugin on
+set expandtab "Pour remplacer les tabulations par des espaces"
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
+
+"Voir :h php"
+let php_sql_query =1
+let php_Baselib=1
+let php_htmlInStrings=1
+let use_xhtml=1
+set runtimepath+=~/.vim/doc/php
+
+"MiniBufExplorer Plugin"
+"the vim direction keys [hjkl] can be made to move you between windows"
+"let g:miniBufExplMapWindowNavVim = 1
+"arrow keys can be made to do the same thing"
+let g:miniBufExplMapWindowNavArrows = 1
+"Ctrl+Tab & Ctrl+Shift+Tab can be setup to switch through your open windows"
+let g:miniBufExplMapCTabSwitchBufs = 1
+"Ctrl+Tab & Ctrl+Shift+Tab can alternatively be setup to cycle through your modifiable buffers in the current window"
+"let g:miniBufExplModSelTarget = 1
+
+
+" ==================================================
+" Mappings
+" ==================================================
+
+" change the leader to be a comma vs slash
+let mapleader=";"
+
+" set the paste toggle key
+set pastetoggle=<F11>
+
+" Y yanks to the end of the line
+nmap Y y$
+" shortcuts for copying to clipboard
+map <leader>y "+y
+" copy the current line to the clipboard
+map <leader>Y "+yy
+"Paste from clipboard
+map <leader>p "+gP
+"Paste with correct indentation
+map <leader>P p=`]
+"Cut to clipboard
+map <leader>x "+x
+" show the registers from things cut/yanked
+nmap <leader>r :registers<CR>
+
+" Only For The Brave !!!
+"inoremap  <Left>  <NOP>
+"inoremap  <Right> <NOP>
+"inoremap  <Up>    <NOP>
+"inoremap  <Down>  <NOP>
+"noremap   <Down>  <NOP>
+"noremap   <Left>  <NOP>
+"noremap   <Right> <NOP>
+"noremap   <Up>    <NOP>
+"noremap   <Down>  <NOP>
+" Evil mappings for Insert mode:
+" Move around in Insert mode
+imap <C-Left>   <Home>
+imap <C-Right>  <End>
+imap <C-Up>     <C-Home>
+imap <C-Down>   <C-End>
+imap <A-Left>   <S-Left>
+imap <A-Right>  <S-Right>
+imap <A-Up>     <PageUp>
+imap <A-Down>   <PageDown>
+"Move around in Normal mode
+map <C-Left>    <Home>
+map <C-Right>   <End>
+map <C-Up>      <C-Home>
+map <C-Down>    <C-End>
+map <A-Left>    <S-Left>
+map <A-Right>   <S-Right>
+map <A-Up>      <PageUp>
+map <A-Down>    <PageDown>
+
+cmap w!! w !sudo tee %
+" ==================================================
+" Filetypes
+" ==================================================
+
+" Filetypes (au = autocmd)
+au filetype help set nonumber " no line numbers when viewing help
+au filetype help nnoremap <buffer><cr> <c-]> " Enter selects subject
+au filetype help nnoremap <buffer><bs> <c-T> " Backspace to go back
+
+" automatically give executable permissions if file begins with #! and contains
+" '/bin/' in the path
+function ChPerms()
+  if getline(1) =~ "^#!"
+    if getline(1) =~ "/bin/"
+      silent !chmod a+x <afile>
+    endif
+  endif
+endfunction
+au bufwritepost * call ChPerms()
+
+" ==================================================
+" HTML
+" ==================================================
+" enable a shortcut for tidy using ~/.tidyrc config
+map <Leader>T :!tidy -config ~/.tidyrc<cr><cr>
+
+
+" ==================================================
+" Plugins
+" ==================================================
+
+" NERDTree
+" http://www.vim.org/scripts/script.php?script_id=1658
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+map <leader>t :NERDTree<CR>
+
+" Tidy
+map <F12> :call HTMLind()<CR>
+
+function HTMLind()
+	"save file
+	w!
+	"close error window
+	cclose
+	"load compiler
+	comp! tidy
+	"store file name for later use
+	let fn = expand("%")
+	"remove errors.err
+    silent !rm -f errors.err
+	"call tidy
+	let com ="silent !tidy.exe -i -q --indent-spaces 4 -asxhtml "
+	let com = com . " -output " . fn . "_temp " . fn . " 2> errors.err"
+   	execute com	
+	"if no error save the file
+	"else load errors.err
+	if (getfsize("errors.err") != 0)
+		"write file name into errors.err_
+		let com = "silent !echo " . fn . " > errors.err_"
+		execute com
+		silent !cat errors.err | sed 's/\r//g' >> errors.err_
+    	copen 20
+    	cf errors.err_
+		silent !rm -f errors.err_
+	else
+		let com = "silent !mv " . fn . "_temp " . fn 
+		execute com
+		let com = "e " . fn
+		execute com
+	endif
+    silent !rm errors.err
+endfunction                   
+
+
+
+" XML Completion
+" http://www.vim.org/scripts/script.php?script_id=301
+" close xml/html tags like <div>
+
+" pep8
+" http://www.vim.org/scripts/script.php?script_id=2914
+" set to <leader>M in the actual plugin
+
+" python folding jpythonfold.vim
+" http://www.vim.org/scripts/script.php?script_id=2527
+" Setup as ftplugin/python.vim for auto loading
+
+" PyDoc
+" http://www.vim.org/scripts/script.php?script_id=910
+" Search python docs for the keyword
+" <leader>pw - search for docs for what's under cursor
+" <leader>pW - search for any docs with this keyword mentioned
+
+" Supertab
+" http://www.vim.org/scripts/script.php?script_id=182
+" :SuperTabHelp
+
+" SnipMate
+" http://www.vim.org/scripts/script.php?script_id=2540
+" ,, - complete and tab to next section
+" ,n - show list of snippets for this filetype
+
+" Surround
+" http://www.vim.org/scripts/script.php?script_id=1697
+" default shortcuts
+
+" Pylint
+" http://www.vim.org/scripts/script.php?script_id=891
+" default config for underlines of syntax errors in gvim

@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/ju1ius/Téléchargements/packages/sfLexikDoctrineActAsCommentablePlugin/lib/Doctrine/Template'
+let g:netrw_dirhist_2='/home/ju1ius/www/lib/php/bouncehandler-2010-09-18'
+let g:netrw_dirhist_3='/home/ju1ius/code/marchobmenu/fluxdgmenu'
+let g:netrw_dirhist_4='/etc/fluxdgmenu'
+let g:netrw_dirhist_5='/home/ju1ius/code/marchobmenu/fluxdgmenu'
+let g:netrw_dirhist_6='/usr/local/lib/fluxdgmenu'

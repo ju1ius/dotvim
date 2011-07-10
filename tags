@@ -1,0 +1,60 @@
+<C-R>	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> <C-R> <C-R>:JSLintUpdate<CR>$/;"	m
+<C-R>	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> <C-R> <C-R>:JSLintUpdate<CR>$/;"	m
+ActivateJSLintQuickFixWindow	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    function s:ActivateJSLintQuickFixWindow()$/;"	f
+ActivateJSLintQuickFixWindow	ftplugin/javascript/jslint.vim	/^    function s:ActivateJSLintQuickFixWindow()$/;"	f
+GetJSLintMessage	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s:GetJSLintMessage()$/;"	f
+GetJSLintMessage	ftplugin/javascript/jslint.vim	/^  function s:GetJSLintMessage()$/;"	f
+GetQuickFixStackCount	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    function s:GetQuickFixStackCount()$/;"	f
+GetQuickFixStackCount	ftplugin/javascript/jslint.vim	/^    function s:GetQuickFixStackCount()$/;"	f
+JSLint	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^function! s:JSLint()$/;"	f
+JSLint	ftplugin/javascript/jslint.vim	/^function! s:JSLint()$/;"	f
+JSLintClear	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^function! s:JSLintClear()$/;"	f
+JSLintClear	ftplugin/javascript/jslint.vim	/^function! s:JSLintClear()$/;"	f
+JSLintToggle	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  command JSLintToggle :let b:jslint_disabled = exists('b:jslint_disabled') ? b:jslint_disabled ? 0 : 1 : 1$/;"	c
+JSLintToggle	ftplugin/javascript/jslint.vim	/^  command JSLintToggle :let b:jslint_disabled = exists('b:jslint_disabled') ? b:jslint_disabled ? 0 : 1 : 1$/;"	c
+JSLintUpdate	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  command JSLintUpdate :call s:JSLintUpdate()$/;"	c
+JSLintUpdate	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s:JSLintUpdate()$/;"	f
+JSLintUpdate	ftplugin/javascript/jslint.vim	/^  command JSLintUpdate :call s:JSLintUpdate()$/;"	c
+JSLintUpdate	ftplugin/javascript/jslint.vim	/^  function s:JSLintUpdate()$/;"	f
+WideMsg	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s:WideMsg(msg)$/;"	f
+WideMsg	ftplugin/javascript/jslint.vim	/^  function s:WideMsg(msg)$/;"	f
+b:did_jslint_plugin	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let b:did_jslint_plugin = 1$/;"	v
+b:did_jslint_plugin	ftplugin/javascript/jslint.vim	/^  let b:did_jslint_plugin = 1$/;"	v
+b:showing_message	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let b:showing_message = 0$/;"	v
+b:showing_message	ftplugin/javascript/jslint.vim	/^let b:showing_message = 0$/;"	v
+dd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dd dd:JSLintUpdate<CR>$/;"	m
+dd	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dd dd:JSLintUpdate<CR>$/;"	m
+dw	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dw dw:JSLintUpdate<CR>$/;"	m
+dw	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dw dw:JSLintUpdate<CR>$/;"	m
+g:JSLintHighlightErrorLine	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let g:JSLintHighlightErrorLine = 1$/;"	v
+g:JSLintHighlightErrorLine	ftplugin/javascript/jslint.vim	/^  let g:JSLintHighlightErrorLine = 1$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = "$JS_CMD"$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = '\/System\/Library\/Frameworks\/JavaScriptCore.framework\/Resources\/jsc'$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = 'js'$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = 'nodejs'$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:cmd = 'cscript \/NoLogo '$/;"	v
+s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let s:cmd = "cd " . s:plugin_path . " && " . s:cmd . " " . s:plugin_path . "runjslint." . s:runjslint_ext$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^    let s:cmd = "$JS_CMD"$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^    let s:cmd = '\/System\/Library\/Frameworks\/JavaScriptCore.framework\/Resources\/jsc'$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^    let s:cmd = 'js'$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^    let s:cmd = 'node'$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^  let s:cmd = 'cscript \/NoLogo '$/;"	v
+s:cmd	ftplugin/javascript/jslint.vim	/^let s:cmd = "cd " . s:plugin_path . " && " . s:cmd . " " . s:plugin_path . "runjslint." . s:runjslint_ext$/;"	v
+s:install_dir	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let s:install_dir = expand('<sfile>:p:h')$/;"	v
+s:install_dir	ftplugin/javascript/jslint.vim	/^let s:install_dir = expand('<sfile>:p:h')$/;"	v
+s:jslintrc	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:jslintrc = []$/;"	v
+s:jslintrc	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:jslintrc = readfile(s:jslintrc_file)$/;"	v
+s:jslintrc	ftplugin/javascript/jslint.vim	/^  let s:jslintrc = []$/;"	v
+s:jslintrc	ftplugin/javascript/jslint.vim	/^  let s:jslintrc = readfile(s:jslintrc_file)$/;"	v
+s:jslintrc_file	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let s:jslintrc_file = expand('~\/.jslintrc')$/;"	v
+s:jslintrc_file	ftplugin/javascript/jslint.vim	/^let s:jslintrc_file = expand('~\/.jslintrc')$/;"	v
+s:plugin_path	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:plugin_path = substitute(s:plugin_path, '\/', '\\', 'g')$/;"	v
+s:plugin_path	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let s:plugin_path = s:install_dir . "\/jslint\/"$/;"	v
+s:plugin_path	ftplugin/javascript/jslint.vim	/^  let s:plugin_path = substitute(s:plugin_path, '\/', '\\', 'g')$/;"	v
+s:plugin_path	ftplugin/javascript/jslint.vim	/^let s:plugin_path = s:install_dir . "\/jslint\/"$/;"	v
+s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'js'$/;"	v
+s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
+s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'js'$/;"	v
+s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
+u	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m
+u	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m

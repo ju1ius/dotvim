@@ -1,0 +1,1 @@
+/home/ju1ius/.vim/bundle/zencoding-vim/autoload/zencoding.vim
