@@ -1,0 +1,6 @@
+Install
+=======
+    cd
+    git clone git://github.com/ju1ius/dotvim.git .vim
+    cd .vim
+    ln -s ../.vimrc .vim/vimrc
