@@ -22,12 +22,24 @@ b:did_jslint_plugin	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let b:d
 b:did_jslint_plugin	ftplugin/javascript/jslint.vim	/^  let b:did_jslint_plugin = 1$/;"	v
 b:showing_message	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^let b:showing_message = 0$/;"	v
 b:showing_message	ftplugin/javascript/jslint.vim	/^let b:showing_message = 0$/;"	v
+classes	syntax/php_vimgen.php	/^		$classes = $extension->getClasses();$/;"	v
 dd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dd dd:JSLintUpdate<CR>$/;"	m
 dd	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dd dd:JSLintUpdate<CR>$/;"	m
 dw	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dw dw:JSLintUpdate<CR>$/;"	m
 dw	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> dw dw:JSLintUpdate<CR>$/;"	m
+errors	syntax/php_vimgen.php	/^$errors = array();$/;"	v
+ext_classes	syntax/php_vimgen.php	/^		$ext_classes = array();$/;"	v
+ext_constants	syntax/php_vimgen.php	/^			$ext_constants = array_merge($ext_constants, array_keys($class->getConstants()));$/;"	v
+ext_constants	syntax/php_vimgen.php	/^		$ext_constants = array_keys($extension->getConstants());$/;"	v
+ext_constants	syntax/php_vimgen.php	/^		$ext_constants = array_unique($ext_constants);$/;"	v
+ext_functions	syntax/php_vimgen.php	/^		$ext_functions = array_keys($extension->getFunctions());$/;"	v
+ext_info	syntax/php_vimgen.php	/^		$ext_info = array();$/;"	v
+extension	syntax/php_vimgen.php	/^		$extension  = new ReflectionExtension($ext);  $/;"	v
+extensions	syntax/php_vimgen.php	/^$extensions = array($/;"	v
 g:JSLintHighlightErrorLine	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let g:JSLintHighlightErrorLine = 1$/;"	v
 g:JSLintHighlightErrorLine	ftplugin/javascript/jslint.vim	/^  let g:JSLintHighlightErrorLine = 1$/;"	v
+out_file	syntax/php_vimgen.php	/^$out_file = '~\/php_vimgen_out.vim'; \/\/ Pick your output file & location.$/;"	v
+out_str	syntax/php_vimgen.php	/^$out_str = '';$/;"	v
 s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = "$JS_CMD"$/;"	v
 s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = '\/System\/Library\/Frameworks\/JavaScriptCore.framework\/Resources\/jsc'$/;"	v
 s:cmd	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    let s:cmd = 'js'$/;"	v
@@ -56,5 +68,6 @@ s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjs
 s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
 s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'js'$/;"	v
 s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
+store	syntax/php_vimgen.php	/^$store = array();$/;"	v
 u	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m
 u	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m
