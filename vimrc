@@ -243,8 +243,12 @@ let JS_CMD = 'js'
 " EasyMotion
 let g:EasyMotion_leader_key = '<Leader>m'
 
-" Autotags
+" delimitMate
 "
+set backspace=indent,eol,start
+let delimitMate_expand_space = 1
+let delimitMate_expand_cr = 1
+let delimitMate_balance_matchpairs = 1
 
 " XML Completion
 " http://www.vim.org/scripts/script.php?script_id=301

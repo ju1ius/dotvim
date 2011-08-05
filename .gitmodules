@@ -61,3 +61,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/screen"]
+	path = bundle/screen
+	url = https://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
