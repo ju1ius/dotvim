@@ -5,3 +5,6 @@ setlocal shiftwidth=4
 setlocal textwidth=80
 setlocal smarttab
 setlocal expandtab
+
+set keywordprg=~/.vim/ftplugin/python-manual.sh
+
