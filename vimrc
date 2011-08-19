@@ -250,6 +250,9 @@ let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 let delimitMate_balance_matchpairs = 1
 
+" screen.vim
+let g:ScreenShellTerminal = 'x-terminal-emulator'
+
 " XML Completion
 " http://www.vim.org/scripts/script.php?script_id=301
 " close xml/html tags like <div>
