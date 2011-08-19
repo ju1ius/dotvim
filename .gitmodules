@@ -2,7 +2,7 @@
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/surround"]
-	path = bundle/surround.vim
+	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
