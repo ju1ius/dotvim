@@ -6,6 +6,9 @@ GetJSLintMessage	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s
 GetJSLintMessage	ftplugin/javascript/jslint.vim	/^  function s:GetJSLintMessage()$/;"	f
 GetQuickFixStackCount	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^    function s:GetQuickFixStackCount()$/;"	f
 GetQuickFixStackCount	ftplugin/javascript/jslint.vim	/^    function s:GetQuickFixStackCount()$/;"	f
+GetScreenSessions	bundle/screen/autoload/screen.vim	/^function! s:GetScreenSessions()$/;"	f
+GetSize	bundle/screen/autoload/screen.vim	/^function! s:GetSize()$/;"	f
+GetTerminal	bundle/screen/autoload/screen.vim	/^function! s:GetTerminal()$/;"	f
 JSLint	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^function! s:JSLint()$/;"	f
 JSLint	ftplugin/javascript/jslint.vim	/^function! s:JSLint()$/;"	f
 JSLintClear	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^function! s:JSLintClear()$/;"	f
@@ -16,6 +19,17 @@ JSLintUpdate	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  command JSLint
 JSLintUpdate	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s:JSLintUpdate()$/;"	f
 JSLintUpdate	ftplugin/javascript/jslint.vim	/^  command JSLintUpdate :call s:JSLintUpdate()$/;"	c
 JSLintUpdate	ftplugin/javascript/jslint.vim	/^  function s:JSLintUpdate()$/;"	f
+MacGuiCmd	bundle/screen/autoload/screen.vim	/^function! s:MacGuiCmd(cmd, term)$/;"	f
+ScreenBootstrap	bundle/screen/autoload/screen.vim	/^function! s:ScreenBootstrap(cmd)$/;"	f
+ScreenCmdName	bundle/screen/autoload/screen.vim	/^function! s:ScreenCmdName(cmd)$/;"	f
+ScreenFocus	bundle/screen/autoload/screen.vim	/^function! s:ScreenFocus()$/;"	f
+ScreenFocusFuncRef	bundle/screen/autoload/screen.vim	/^function! s:ScreenFocusFuncRef()$/;"	f
+ScreenInit	bundle/screen/autoload/screen.vim	/^function! s:ScreenInit(cmd)$/;"	f
+ScreenQuit	bundle/screen/autoload/screen.vim	/^function! s:ScreenQuit(owner, onleave)$/;"	f
+ScreenSend	bundle/screen/autoload/screen.vim	/^function! s:ScreenSend(...)$/;"	f
+ScreenSendFuncRef	bundle/screen/autoload/screen.vim	/^function! s:ScreenSendFuncRef()$/;"	f
+StartTerminal	bundle/screen/autoload/screen.vim	/^function! s:StartTerminal(command)$/;"	f
+ValidTerminal	bundle/screen/autoload/screen.vim	/^function! s:ValidTerminal(term)$/;"	f
 WideMsg	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  function s:WideMsg(msg)$/;"	f
 WideMsg	ftplugin/javascript/jslint.vim	/^  function s:WideMsg(msg)$/;"	f
 b:did_jslint_plugin	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let b:did_jslint_plugin = 1$/;"	v
@@ -68,6 +82,51 @@ s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjs
 s:runjslint_ext	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
 s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'js'$/;"	v
 s:runjslint_ext	ftplugin/javascript/jslint.vim	/^  let s:runjslint_ext = 'wsf'$/;"	v
+s:save_cpo	bundle/screen/autoload/screen.vim	/^let s:save_cpo=&cpo$/;"	v
+s:screenConque	bundle/screen/autoload/screen.vim	/^let s:screenConque = {}$/;"	v
+s:screenGnuScreen	bundle/screen/autoload/screen.vim	/^let s:screenGnuScreen = {}$/;"	v
+s:screenTmux	bundle/screen/autoload/screen.vim	/^let s:screenTmux = {}$/;"	v
+s:terminals	bundle/screen/autoload/screen.vim	/^    let s:terminals = [$/;"	v
+s:terminals	bundle/screen/autoload/screen.vim	/^    let s:terminals = ['Terminal.app']$/;"	v
+s:terminals	bundle/screen/autoload/screen.vim	/^    let s:terminals = ['bash']$/;"	v
+screen#CommandCompleteScreenSessions	bundle/screen/autoload/screen.vim	/^function! screen#CommandCompleteScreenSessions(argLead, cmdLine, cursorPos)$/;"	f
+screen#ScreenShell	bundle/screen/autoload/screen.vim	/^function! screen#ScreenShell(cmd, orientation)$/;"	f
+screen#ScreenShellAttach	bundle/screen/autoload/screen.vim	/^function! screen#ScreenShellAttach(session)$/;"	f
+screen#ScreenShellCommands	bundle/screen/autoload/screen.vim	/^function! screen#ScreenShellCommands()$/;"	f
+screenConque.isValid	bundle/screen/autoload/screen.vim	/^function s:screenConque.isValid() dict " {{{$/;"	f
+screenConque.openRegion	bundle/screen/autoload/screen.vim	/^function s:screenConque.openRegion(cmd) dict " {{{$/;"	f
+screenConque.quit	bundle/screen/autoload/screen.vim	/^function s:screenConque.quit() dict " {{{$/;"	f
+screenConque.send	bundle/screen/autoload/screen.vim	/^function s:screenConque.send(value) dict " {{{$/;"	f
+screenGnuScreen.attachSession	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.attachSession(session) dict " {{{$/;"	f
+screenGnuScreen.bootstrap	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.bootstrap(server, sessionfile, cmd) dict " {{{$/;"	f
+screenGnuScreen.close	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.close(type) dict " {{{$/;"	f
+screenGnuScreen.exec	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.exec(cmd) dict " {{{$/;"	f
+screenGnuScreen.focus	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.focus() dict " {{{$/;"	f
+screenGnuScreen.isValid	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.isValid() dict " {{{$/;"	f
+screenGnuScreen.newSessionName	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.newSessionName() dict " {{{$/;"	f
+screenGnuScreen.newTerminal	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.newTerminal() dict " {{{$/;"	f
+screenGnuScreen.newTerminalMulti	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.newTerminalMulti() dict " {{{$/;"	f
+screenGnuScreen.newTerminalResume	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.newTerminalResume() dict " {{{$/;"	f
+screenGnuScreen.newWindow	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.newWindow(focus) dict " {{{$/;"	f
+screenGnuScreen.openRegion	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.openRegion(cmd) dict " {{{$/;"	f
+screenGnuScreen.quit	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.quit() dict " {{{$/;"	f
+screenGnuScreen.send	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.send(value) dict " {{{$/;"	f
+screenGnuScreen.setTitle	bundle/screen/autoload/screen.vim	/^function s:screenGnuScreen.setTitle() dict " {{{$/;"	f
+screenTmux.activePane	bundle/screen/autoload/screen.vim	/^function s:screenTmux.activePane() dict "{{{$/;"	f
+screenTmux.attachSession	bundle/screen/autoload/screen.vim	/^function s:screenTmux.attachSession(session) dict " {{{$/;"	f
+screenTmux.bootstrap	bundle/screen/autoload/screen.vim	/^function s:screenTmux.bootstrap(server, sessionfile, cmd) dict " {{{$/;"	f
+screenTmux.close	bundle/screen/autoload/screen.vim	/^function s:screenTmux.close(type) dict " {{{$/;"	f
+screenTmux.exec	bundle/screen/autoload/screen.vim	/^function s:screenTmux.exec(cmd) dict " {{{$/;"	f
+screenTmux.focus	bundle/screen/autoload/screen.vim	/^function s:screenTmux.focus() dict " {{{$/;"	f
+screenTmux.isValid	bundle/screen/autoload/screen.vim	/^function s:screenTmux.isValid() dict " {{{$/;"	f
+screenTmux.newSessionName	bundle/screen/autoload/screen.vim	/^function s:screenTmux.newSessionName() dict " {{{$/;"	f
+screenTmux.newTerminal	bundle/screen/autoload/screen.vim	/^function s:screenTmux.newTerminal() dict " {{{$/;"	f
+screenTmux.newTerminalResume	bundle/screen/autoload/screen.vim	/^function s:screenTmux.newTerminalResume() dict " {{{$/;"	f
+screenTmux.newWindow	bundle/screen/autoload/screen.vim	/^function s:screenTmux.newWindow(focus) dict " {{{$/;"	f
+screenTmux.openRegion	bundle/screen/autoload/screen.vim	/^function s:screenTmux.openRegion(cmd) dict " {{{$/;"	f
+screenTmux.quit	bundle/screen/autoload/screen.vim	/^function s:screenTmux.quit() dict " {{{$/;"	f
+screenTmux.send	bundle/screen/autoload/screen.vim	/^function s:screenTmux.send(value) dict " {{{$/;"	f
+screenTmux.setTitle	bundle/screen/autoload/screen.vim	/^function s:screenTmux.setTitle() dict " {{{$/;"	f
 store	syntax/php_vimgen.php	/^$store = array();$/;"	v
 u	bundle/jslint.vim/ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m
 u	ftplugin/javascript/jslint.vim	/^noremap <buffer><silent> u u:JSLintUpdate<CR>$/;"	m

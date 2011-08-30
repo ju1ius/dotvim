@@ -64,3 +64,6 @@
 [submodule "bundle/screen"]
 	path = bundle/screen
 	url = https://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
+[submodule "bundle/multiselect"]
+	path = bundle/multiselect
+	url = https://github.com/vim-scripts/multiselect.git
